@@ -1,0 +1,84 @@
+body{
+    margin:0;
+    padding: 0px;
+    box-sizing: 0px;
+}
+#container{
+    width:1200px;
+    margin: 0 auto;
+}
+.header{
+    width:1200px;
+    height:60px;
+    background-color: rgba(17, 180, 221, 0.87);
+   
+}
+.header img{
+    height:40px;
+    margin-top: 10px ;
+    margin-left: 10px;
+}
+.header span{
+    margin-left: 15px;
+    
+}
+/* ul li 转化成行内元素，设置其位置大小*/
+.header ul{
+    display:inline-block;
+    margin-left: 800px;
+   
+}
+.header ul li{
+    display:inline-block;
+ 
+}
+
+
+
+.move{
+    text-align:center;
+}
+.move img{
+    width:95%;
+    height: 95%;
+    margin-top: 10px;
+
+}
+.move ul li{
+  width:180px;
+  height:280px;
+  border: rgb(1, 22, 22) solid 2px;
+  display:inline-block;
+}
+
+.footer{
+    width:100%;
+    background-color: rgb(0, 174, 255);
+
+}
+.footer li{
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+ .footer img{
+     
+     width:150px;
+    height: 132px;
+ }
+ .footer0{
+     width:50%;
+     float:left;
+     background-color:rgb(0, 174, 255) ;
+ }
+ .footer1{
+     width:50%;
+     float:right;
+    background-color: rgb(0, 174, 255);
+ }
+
+
+.ban{
+    text-align: center;
+    color: black;
+}
