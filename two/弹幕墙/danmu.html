@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,52 +6,58 @@
 <title></title> 
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
 </script>
-    <style>
-        .screen{
+<style>
+    *{ 
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+    .screen{
         position: relative;
         width: 1200px;
         height: 500px;
-        background-color: beige;
         border:5px solid black;
         margin: 0 auto;
         overflow: hidden;
+        background-color: beige;
     }
-        input{
-            border-radius: 5px;
-            display: block;
-            width: 300px;
-            height: 30px;
-            margin: 0 auto;
-            margin-top: 20px;
-        }
-        .btn{
-            width: 20%;
-            height: 50px;
-            line-height: 50px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        button{
-            display: inline-block;
-            width: 100px;
-            height: 30px;
-            background-color: cyan;
-        }
-    </style>
-    
+    input{
+        border-radius: 5px;
+        display: block;
+        width: 300px;
+        height: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .btn{
+        width: 100%;
+        height: 50px;
+        margin: 0 auto;
+        line-height: 50px;
+        text-align: center;
+       
+    }
+    button{
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+       background-color: cyan;
+      
+    }
+
+</style>
 </head>
 <body>
     <div class="screen"></div>
     <input type="text"><br>
-    <div class="btn">
-        <button class="shoot">发射</button>
-        <button class="clear">清屏</button>
-        <button class="opacity">弹幕透明</button>
-    </div>
-    <script>
-         $(function(){
-        var op=false;
-        $('.shoot').click(function(){
+<div class="btn">
+    <button class="shoot">发射</button>
+    <button class="clear">清屏</button>
+    <button class="opacity">弹幕透明</button>
+</div>
+<script>
+    $(function(){
+         var op = false;
+        $(".shoot").click(function(){
             var txt = $('input').val();
             var span = $('<span></span>');
             var fontsize = parseInt(Math.random() * 40) + 20;
@@ -62,6 +69,7 @@
             var v = Math.random() * 20000;
             v = v < 3000 ? 5000 : v;
             //console.log(fontsize,top,color);
+           // $("#txt").css('opacity', '0.6');
             top = top < 20 ? '30px' : top +'px';
             fontsize = fontsize + 'px';
             span.css('position','absolute').css('top',top).css('right',0).css('color',color).css('font-size',fontsize);
@@ -82,22 +90,23 @@
             $('.screen').empty();
         })
         $('input').keyup(function(e){
-            //console.log(e.keyCode);
+           
             if(e.keyCode==13){
-                $('shoot').click();
+                $('.shoot').click();
             }
         })   
         //弹幕透明
         $('.opacity').click(function(){
             op=!op;
             if(op){
-                $('span').css('opactiy',0.2);
-            }
+              $('span').css('opacity',0.2);
+            }  
             else{
-                $('span').css('opacity',1);
+                $('span').css('opacity',1); 
             }
-            $('span').css('opacity')
+
         })
-        })
-    </script>
+    })
+</script>
 </body>
+</html>
