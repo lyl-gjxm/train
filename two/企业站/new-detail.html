@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=In2GUxBnPRvAKqlYZDG0HwO7DY7y0IU7"></script>  
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script><!--调用jQuery-->
+    <style >
+ * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #header {
+        width: 1200px;
+        height: 100px;
+       background-color: white;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .logo span {
+        margin-left: 25px;
+    }
+
+    .nav li {
+        display: flex;
+        list-style: none;
+        float: right;
+        margin-left: 8px;
+        margin-top: 40px;
+    }
+
+    .nav li a {
+        color: black;
+    }
+
+    .containter {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .list li {
+        border: 1px solid seashell;
+    }
+
+    .list img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .footer{
+      width:1200px;
+      height:350px;
+      background-color: grey;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer  li {
+      display: inline-block;
+      list-style: none;
+      margin-top: 50px;
+      padding-right: 200px;
+      text-align: center;
+      
+    }
+
+  
+    .nav li a:hover{
+
+color: red;
+    }
+      
+     #allmap 
+        {width: 800px;height:500px;overflow: hidden;margin-left:200px;margin-top:20px;font-family:"微软雅黑";}
+    </style> 
+</head>
+<body>
+    
+
+    <div id="header">
+        <div style="display: flex;justify-content: space-between;">
+            <div class="logo">
+                <img src="G.png" alt="" style="width: 80px;height: 80px;">
+                <span>xxxholic</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="new-detail.html">关于我们</a></li>
+                    <li><a href="new.html">新闻</a></li>&nbsp;&nbsp;
+                    <li><a href="index.html">首页</a></li>&nbsp;&nbsp;
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="containter">
+<div class="di">
+<p id="allmap"></p>
+
+
+
+
+</div>
+    
+<div class="footer">
+  
+    <ul>
+      <li><img src="er.jpg" style="width:150px;height: 150px;"><br><br>
+      <p>扫码联系！！！</p></li>
+      <li><img src="6-15.png" style="width:150px;height: 150px;">
+      <p>3249652440@qq.com</p></li>
+      
+    </ul>
+   
+    <div style="width: 200px;margin: 0 auto;">
+      <hr width="200px"><br>
+      <p>&nbsp;&nbsp;@lyl-gjxm</p>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">  
+    var map = new BMap.Map("allmap");  
+    var point = new BMap.Point(116.709684,39.89778);
+    map.centerAndZoom(point, 16);  
+    map.enableScrollWheelZoom(); 
+    var myIcon = new BMap.Icon("G.png",new BMap.Size(30,30),{
+    anchor: new BMap.Size(10,10)    
+    });
+    var marker=new BMap.Marker(point,{icon: myIcon});  
+    map.addOverlay(marker);  
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+    if(this.getStatus() == BMAP_STATUS_SUCCESS){
+    var mk = new BMap.Marker(r.point);
+    map.addOverlay(mk);
+    //map.panTo(r.point);//地图中心点移到当前位置
+    var latCurrent = r.point.lat;
+    var lngCurrent = r.point.lng;
+    //alert('我的位置：'+ latCurrent + ',' + lngCurrent);
+    location.href="http://api.map.baidu.com/direction?origin="+latCurrent+","+lngCurrent+"&destination=39.89778,116.709684&mode=driving&region=北京&output=html";
+    }
+    else {
+    alert('failed'+this.getStatus());
+    }        
+    },{enableHighAccuracy: true})
+    map.addOverlay(marker);  
+    var licontent="<b>健龙森羽毛球馆</b><br>";  
+    licontent+="<span><strong>地址：</strong>北京市通州区滨河中路108号</span><br>";  
+    licontent+="<span><strong>电话：</strong>(010)81556565 / 6969</span><br>";          
+    var opts = { 
+    width : 200,
+    height: 80,
+    };         
+    var infoWindow = new BMap.InfoWindow(licontent, opts);  
+    marker.openInfoWindow(infoWindow);  
+    marker.addEventListener('click',function(){
+    marker.openInfoWindow(infoWindow);
+    });  
+   </script> 
+
+   
+<script>
+    console.log(window.location.search.split('=')[1])
+    let id = window.location.search.split('=')[1]
+    axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products/${id}`).then(function (res) {
+        console.log(res.data);
+        let title = $(`<h1>${res.data.name}</h1>`);
+        let img =  $(`<img src=${res.data.images[0].src} />`);
+        $('.container').append(title);
+        $('.container').append(img);
+    })
+</script>
+

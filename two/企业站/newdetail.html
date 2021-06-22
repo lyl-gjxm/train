@@ -1,0 +1,103 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>详情页</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous"><!-- 导入bootstrap v5的CSS 文件去除integrity部分 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script><!-- 导入bootstrap v5的js文件集成包去除integrity部分 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*导航栏*/
+        #nav {
+            height: 100px;
+            width: 1200px;
+            margin: 0px auto;
+            background-color: #f1dfee;
+        }
+
+        .left img {
+            float: left;
+        }
+
+        #nav h4 {
+            float: left;
+            color: #000000;
+            margin-top: 30px;
+        }
+
+        #nav img {
+            float: right;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+
+        #nav li {
+
+            list-style: none;
+            float: right;
+            margin-top: 30px;
+            line-height: 90px;
+        }
+
+        #nav li a:hover {
+            color: #55aa00;
+        }
+
+        /*中部*/
+        .nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav li {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+
+        .containter {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .list li {
+            border: 1px solid seashell;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        console.log(window.location.search.split('=')[1])
+        let id = window.location.search.split('=')[1]
+        axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products/${id}`).then(function (res) {
+            console.log(res.data);
+            let title = $(`<h1>${res.data.name}</h1>`);
+            $('div').append(title);
+        })
+    </script>
+</body>
+
+</html>

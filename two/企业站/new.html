@@ -1,0 +1,206 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous"><!-- 导入bootstrap v5的CSS 文件去除integrity部分 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script><!-- 导入bootstrap v5的js文件集成包去除integrity部分 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: whitegrey;
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        .logo span {
+            margin-left: 25px;
+        }
+
+        .nav li {
+            display: flex;
+            list-style: none;
+            float: right;
+            margin-left: 8px;
+            margin-top: 40px;
+        }
+
+        .nav li a {
+            color: black;
+        }
+
+        .containter {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .list li {
+            border: 1px solid seashell;
+        }
+
+        .list img {
+            width: 400px;
+            height: 400px;
+        }
+
+      .footer{
+      width:1200px;
+      height:350px;
+      background-color: grey;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer  li {
+      display: inline-block;
+      list-style: none;
+      margin-top: 50px;
+      padding-right: 200px;
+      text-align: center;
+      
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div style="display: flex;justify-content: space-between;">
+            <div class="logo">
+                <img src="G.png" alt="" style="width: 80px;height: 80px;">
+                <span>xxxholic</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="new-detail.html">关于我们</a></li>
+                    <li><a href="new.html">新闻</a></li>&nbsp;&nbsp;
+                    <li><a href="index.html">首页</a></li>&nbsp;&nbsp;
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+ <!-- 分页 ==========================================================-->
+
+
+
+
+
+
+  <!-- 分页============================================================= -->
+  <div class="container">
+    <div>
+        <ul class="list">
+
+        </ul>
+    </div>
+
+
+
+        <!-- 分页 -->
+        <div style="margin-left: 550px;">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li onclick="pre()" class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li onclick="getUrl(1)" class="page-item"><a class="page-link" href="#">1</a></li>
+                <li onclick="getUrl(2)" class="page-item"><a class="page-link" href="#">2</a></li>
+                <li onclick="getUrl(3)" class="page-item"><a class="page-link" href="#">3</a></li>
+                <li onclick="next()" class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    </div>
+
+
+    <div class="footer">
+  
+        <ul>
+          <li><img src="er.jpg" style="width:150px;height: 150px;"><br><br>
+          <p>扫码联系！！！</p></li>
+          <li><img src="6-15.png" style="width:150px;height: 150px;">
+          <p>3249652440@qq.com</p></li>
+          
+        </ul>
+       
+        <div style="width: 200px;margin: 0 auto;">
+          <hr width="200px"><br>
+          <p>&nbsp;&nbsp;@lyl-gjxm</p>
+        </div>
+      </div>
+
+    <script>
+        let current =Number(window.location.href.split('?page=')[1]) || 1;
+        function pre() {
+            if (current > 1) {
+                getUrl(current - 1);
+            }
+        }
+        function next() {
+            if (current < 3) {
+                getUrl(current + 1);
+
+            }
+        }
+        function getUrl(page){
+            window.location.href = `?page=${page}`
+        }
+        page(current)
+        function page(page) {
+            current = page;
+            $('.list').empty();//https://lingqule.papamk.com/wp-json/w2w/v1/products?page=${page}
+            axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products?page=${page}`).then(function (res) {
+                console.log(res.data);
+                for (let i = 0; i < 9; i++) {
+                    let li = $('<li></li>');
+                    li.append(`<img width='300px' hight='300px' src=${res.data[i].images[0].src}>`);
+                    li.append(`<h3>${res.data[i].name}</h3>`)
+                    li.append(`<span>${res.data[i].date_created}</span>`)
+                    li.attr('id', res.data[i].id);
+                    $('.list').append(li)
+                }
+                $('.list li').click(function () {
+                    window.location.href = `./newdetail.html?id=${$(this).attr('id')}`
+                })
+            })
+        }
+    </script>
+
+</body>
+
+</html>

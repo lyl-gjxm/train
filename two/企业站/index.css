@@ -1,0 +1,12 @@
+.junxun img{
+    width:700px;
+    height:500px;
+
+}
+.junxun{
+    background-color:antiquewhite;
+    margin-top:30px;
+    display: flex;
+}
+
+

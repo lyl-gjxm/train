@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="index.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: white;
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        .logo span {
+            margin-left: 25px;
+        }
+
+        .nav li {
+            display: flex;
+            list-style: none;
+            float: right;
+            margin-left: 8px;
+            margin-top: 40px;
+        }
+
+        .nav li a {
+            color: black;
+        }
+
+        .containter {
+            width: 1200px;
+            margin: 0 auto;
+           
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .list li {
+            border: 1px solid seashell;
+        }
+
+        .list img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .footer{
+      width:1200px;
+      height:350px;
+      background-color: grey;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer  li {
+      display: inline-block;
+      list-style: none;
+      margin-top: 50px;
+      padding-right: 200px;
+      text-align: center;
+
+
+      .nav li a:hover{
+
+color: red;
+    }
+      
+
+    #photo_box{
+    width: 280px;
+    height: 400px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: 200px auto;
+    transform-style: preserve-3d;/*表示所有子元素在3D空间中呈现*/
+    transform: rotateX(-5deg) rotateY(0deg);
+    animation: run 30s linear infinite;/*循环执行run动画，每30秒执行一次*/
+}
+
+/*设置图像大小、边框、圆角、位置*/
+#photo_box img{
+    width: 250px;
+    height: 350px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div style="display: flex;justify-content: space-between;">
+            <div class="logo">
+                <img src="G.png" alt="" style="width: 80px;height: 80px;">
+                <span>xxxholic</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="new-detail.html">关于我们</a></li>
+                    <li><a href="new.html">新闻</a></li>&nbsp;&nbsp;
+                    <li><a href="index.html">首页</a></li>&nbsp;&nbsp;
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+    <div class="containter">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" margin-top="20px">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+          
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="./7.jpg" alt="..." >
+                <div class="carousel-caption">
+                  ...
+                </div>
+              </div>
+              <div class="item">
+                <img src="./6.jpg" alt="...">
+                <div class="carousel-caption">
+                  ...
+                </div>
+              </div>
+              ...
+              <!-- ======================================== -->
+              <div class="item">
+                <img src="./8.jpg" alt="...">
+                <div class="carousel-caption">
+                  ...
+                </div>
+              </div>
+                <!-- ======================================== -->
+
+                <div class="item">
+                    <img src="./10.jpg" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="./9.jpg" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+
+                  <div>
+
+                  </div>
+
+
+            </div>
+          
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        
+         <!-- 引入jquery与bootstrap的js文件 -->
+         <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script>
+             $(".carousel").carousel({
+                 interval: 2000 //每隔两秒自动轮播
+             })
+         </script>     
+      
+
+         <hr width:400px>
+         <h3 style="text-align:center ;color:darksalmon">主要人物介绍</h3>
+
+     <div class="junxun">
+       <div class="photo1">
+         <img src="3.jpg" alt="">
+       </div>
+       <div class="junxuncom">
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;四月一日君寻</h3>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一名高中生（私立十字学园），小时候父母因车祸意外而亡，具有看见灵体的能力、
+           灵体也会被其吸引的灵能力者，但不能驱除它(他)们(与百目鬼的能力可说是相辅相成)。非常善于作料理、很会做家事。
+           因为意外发现了侑子的店又被吸引进入(但这似乎是必然的)，侑子答应让四月一日不再受到灵体困扰、然而他必须在店里打工作为代价。
+           （但其实是收取记忆为代价，这就是他对父母印象很少的原因，但侑子至消失都没有对他说。）
+
+        </p>
+       </div>
+     </div>
+
+     <div class="junxun">
+      <div class="photo1">
+        <img src="1.jpg" alt="">
+      </div>
+      <div class="junxuncom">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;壹园侑子</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+          实际上，“壹原侑子”并非其真名。真名现尚不明。她拥有强大的魔力，能够穿越次元和时间，能够预测未来发生的事情，甚至可以创造异次元的神明。
+          作为能达成人任何愿望的人，她自然也对其它世界的事相当的清楚。人称其为“次元的魔女”、“极东的魔女”。
+          在异世界很有声望和名气，基本上是无“人”不知，无 “人”不晓。和异世界的“人们”相处的很好。
+
+          侑子喜欢用长烟斗抽烟。她酒量极佳，且爱好美食，在美食和酒面前会变得相当孩子气，十分喜欢四月一日做的料理，经常夸奖四月一日的手艺很棒~ 
+          侑子与创造“库洛牌”的库洛·里德关系很好，但却称库洛为“阴险的眼镜仔”。是库洛唯一认同拥有魔力的女性（飞王语）。</p>
+      </div>
+    </div>
+      
+    <div class="junxun">
+      <div class="photo1">
+        <img src="2.jpg" alt="">
+      </div>
+      <div class="junxuncom">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百目鬼静</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;四月一日的同学，学级委员。参加箭道社、是一间庙宇住持的独生子。有除魔力量的灵能力者、灵体不敢靠近，
+          但他本身看不见妖怪和灵体。
+          雨童女说他有「洁净的气息」。长的很帅，是很多女生所追求的对象，面瘫系帅哥，身材高大体格健壮不善言辞，长的与爷爷百目鬼遥年轻时几乎一模一样。
+
+          本来什么都不在意，总是以一副死气沉沉样子的万年冰山，看起来沉默寡言，但和四月一日一起时就会变得啰唆，喜欢吐槽四月一日，
+          喜欢和四月一日吵架也很喜欢捉弄四月一日，但其实和四月一日很有默契和友情。贪吃而且很能吃，喜欢吃四月一日做的料理。</p>
+      </div>
+    </div>
+
+    <div class="junxun">
+      <div class="photo1">
+        <img src="4.jpg" alt="">
+      </div>
+      <div class="junxuncom">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;九轩葵</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;四月一日的同班同学，同时也是他单恋的对象，是个有着清纯容貌及明朗个性的少女。
+          特征是我行我素、笑容不断；拥有强大的精神力，对怪事不为所动，对于妖怪的存在及会说话的莫可拿也能若无其事的接受。
+          小葵本人是给旁人招来厄运的灵能力者。</p>
+      </div>
+    </div>
+
+    <script src="echarts.min.js"></script>
+
+    <div id="main" style="width: 1000px;height:500px; margin-left: 100px; margin-top: 20px;"></div>
+    
+    <script>
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('main'));
+    
+      // 指定图表的配置项和数据 放在option对象里面
+      var option = {
+        title: {
+          text: '动漫受众类型',
+          
+          x: 'center'
+        },
+        tooltip: {
+          trigger: 'item',
+          formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+          x: 'center',
+          y: 'bottom',
+          data: ['恐怖', '纯爱', '校园', '黑暗英伦', '悬疑', '搞笑', '后宫', '热血']
+        },
+        toolbox: {
+          show: true,
+          feature: {
+            mark: { show: true },
+            dataView: { show: true, readOnly: false },
+            magicType: {
+              show: true,
+              type: ['pie', 'funnel']
+            },
+            restore: { show: true },
+            saveAsImage: { show: true }
+          }
+        },
+        calculable: true,
+        series: [
+          {
+            name: '半径模式',
+            type: 'pie',
+            radius: [20, 110],
+            center: ['25%', '50%'],
+            roseType: 'radius',
+            label: {
+              normal: {
+                show: false
+              },
+              emphasis: {
+                show: true
+              }
+            },
+            lableLine: {
+              normal: {
+                show: false
+              },
+              emphasis: {
+                show: true
+              }
+            },
+            data: [
+              { value: 10, name: '恐怖' },
+              { value: 5, name: '纯爱' },
+              { value: 15, name: '校园' },
+              { value: 25, name: '黑暗英伦' },
+              { value: 20, name: '悬疑' },
+              { value: 35, name: '搞笑' },
+              { value: 30, name: '后宫' },
+              { value: 40, name: '热血' }
+            ]
+          },
+          {
+            name: '面积模式',
+            type: 'pie',
+            radius: [30, 110],
+            center: ['75%', '50%'],
+            roseType: 'area',
+           data: [
+              { value: 10, name: '恐怖' },
+              { value: 5, name: '纯爱' },
+              { value: 15, name: '校园' },
+              { value: 25, name: '黑暗英伦' },
+              { value: 20, name: '悬疑' },
+              { value: 35, name: '搞笑' },
+              { value: 30, name: '后宫' },
+              { value: 40, name: '热血' }
+            ]
+          }
+        ]
+      };
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option);
+    </script>
+
+
+
+    
+    </div>
+
+    
+ 
+
+
+    <div class="footer">
+  
+      <ul>
+        <li><img src="er.jpg" style="width:150px;height: 150px;"><br><br>
+        <p>扫码联系！！！</p></li>
+        <li><img src="6-15.png" style="width:150px;height: 150px;">
+        <p>3249652440@qq.com</p></li>
+        
+      </ul>
+     
+      <div style="width: 200px;margin: 0 auto;">
+        <hr width="200px"><br>
+        <p>&nbsp;&nbsp;@lyl-gjxm</p>
+      </div>
+    </div>
+
+</body>
+</html>
