@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	
+	    <title>Document</title>
+		<style>
+		 img {
+		            display: block;
+					}
+					
+   </style>
+</head>
+<body>
+ 
+ <!-- <script>
+         var imgs = document.querySelectorAll('img');
+ 
+         //offsetTop是元素与offsetParent的距离，循环获取直到页面顶部
+         function getTop(e) {
+             var T = e.offsetTop;
+             while(e = e.offsetParent) {
+                 T += e.offsetTop;
+             }
+             return T;
+         }
+ 
+         function lazyLoad(imgs) {
+             var H = document.documentElement.clientHeight;//获取可视区域高度
+             var S = document.documentElement.scrollTop || document.body.scrollTop;
+             for (var i = 0; i < imgs.length; i++) {
+                 if (H + S > getTop(imgs[i])) {
+                     imgs[i].src = imgs[i].getAttribute('data-src');
+                 }
+             }
+         }
+ 
+         window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
+             lazyLoad(imgs);
+         }
+ </script>
+ 
+ -->
+ 
+ <nav class="navbar navbar-default" role="navigation">
+ 	<div class="container-fluid"> 
+ 	<div class="navbar-header">
+ 		<button type="button" class="navbar-toggle" data-toggle="collapse"
+ 				data-target="#example-navbar-collapse">
+ 			<span class="sr-only">切换导航</span>
+ 			<span class="icon-bar"></span>
+ 			<span class="icon-bar"></span>
+ 			<span class="icon-bar"></span>
+ 		</button>
+ 		<a class="navbar-brand" href="#"><img src="loading.gif" data-src="G.png" style="width: 35px;height:35px;"></a>
+ 		<a class="navbar-brand" href="#" style="margin-left: 10px;">XXXholic</a>
+ 		
+ 	</div>
+ 	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+ 		<ul class="nav navbar-nav">
+ 			<li class="active"><a href="#a">喜欢的电影</a></li>
+ 			<li><a href="#b">喜欢的明星</a></li>
+ 			<li><a href="#c">npc语录</a></li>
+ 			
+ 			
+ 			</li>
+ 		</ul>
+ 	</div>
+ 	</div>
+ </nav>
+ 
+ 
+
+ <h4 id="a" style="text-align: center;color:red;">喜欢的电影</h4> 
+ <hr width="300px" size="2" color="black">
+   <div class="row">
+     <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+         <img  src="loading.gif" data-src="h1.jpg" alt="..."style="width:300px;height:300px;">
+		 <p style="text-align: center; text-decoration: none;">哈利波特</p>
+       </a>
+     </div>
+   
+     <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+         <img src="loading.gif" data-src="h2.jpg" alt="..."style="width:300px;height:300px;">
+		  <p style="text-align: center; text-decoration: none;">哈利波特</p>
+       </a>
+     </div>
+   
+     <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+         <img src="loading.gif" data-src="h3.jpg" alt="..."style="width:300px;height:300px;">
+		  <p style="text-align: center; text-decoration: none;">哈利波特</p>
+       </a>
+     </div>
+   
+     <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+         <img src="loading.gif" data-src="h4.jpg" alt="..."style="width:300px;height:300px;">
+		  <p style="text-align: center; text-decoration: none;">哈利波特</p>
+       </a>
+     </div>
+   
+    
+   </div>
+     
+   </div>
+   
+   
+   
+
+   <h4 id="b" style="text-align: center;color:red;">喜欢的明星</h4>  
+	<hr width="300px" size="2" color="black">
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="loading.gif" data-src="g2.jpg" alt="..."style="width:300px;height:300px;">
+		    <p style="text-align: center; text-decoration: none;">龚俊Simon</p>
+         </a>
+       </div>
+     
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="loading.gif" data-src="g3.jpg" alt="..."style="width:300px;height:300px;">
+		   <p style="text-align: center; text-decoration: none;">龚俊Simon</p>
+         </a>
+       </div>
+     
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="loading.gif" data-src="g4.jpg" alt="..."style="width:300px;height:300px;">
+		   <p style="text-align: center; text-decoration: none;">龚俊Simon</p>
+         </a>
+       </div>
+     
+       <div class="col-xs-6 col-md-3">
+         <a href="#" class="thumbnail">
+           <img src="loading.gif" data-src="g5.jpg" alt="..."style="width:300px;height:300px;">
+		   <p style="text-align: center; text-decoration: none;">龚俊Simon</p>
+         </a>
+       </div>
+     
+      
+     </div>
+       
+     </div>
+ 
+ 
+ 
+ <div class="row " style="margin: auto;" >
+	 
+	 <li class="col-xs-6 col-md-6 col-sm-10"style="list-style:none;">
+	     <div class="media-body  ">
+	         <h4 style="margin-top: 20px; " class="media-heading" id="c">npc语录</h4>
+	         <p style="text-indent: 2em;">1,“爱咋说咋说，我生活我的，你不喜欢我，希望你开心一点就好了”<br>
+			 
+			 2,“生活的压力已经这么大了，大家都要做让自己开心的事”<br>
+			 3,“不再游走在成长这条无边无尽的路上，而在经历中取胜，搜索方向，不停寻找。<br>
+			 4,“既然工作都必须得完成，你得赚钱，那赚钱为什么不快乐呢？”<br>
+			 
+			 </p>
+			 </li>
+ 	
+ 	        <li class="media col-xs-12 col-md-6 col-sm-10 "style="list-style:none;">
+ 	            <div class="media-left  ">
+ 
+ 	                <div  >
+						<img src="loading.gif" data-src="g1.jpg" style="width:200px;height:200px;">
+					</div>
+ 	
+ 	               
+ 	            </div>
+ 	    </li>
+ 	
+ 	    
+ 	   
+ 	    </div>
+ 		
+ 	</div>
+ </div>
+ 
+ 
+  <br>
+   <br>
+    <br>
+ 
+
+ <div class="row " " >
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img src="loading.gif" data-src="ting.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">13110769174</h4>
+   </div>
+ 
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img src="loading.gif" data-src="youjian.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">邮件</h4>
+   </div>
+ 
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img src="loading.gif" data-src="dizhi.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">地址</h4>
+   </div>
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img src="loading.gif" data-src="er.jpg" alt="...">
+       </a>
+       <h4 style="text-align: center;">求关注！！！</h4>
+   </div>
+ 
+   <hr width:400px>
+   
+   <h4 style="text-align: center;">@lyl-gjxm</h4>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+</body>
+</html>
+
+<script>
+  function imgonload() {
+    let img = document.querySelectorAll("img");
+    /*console.log(img);*/
+    for(let i=0; i<img.length; i++) {
+      if(img[i].getBoundingClientRect().top < window.innerHeight) {
+        //图片一旦有src就会加载出来，所以图片的路径不会放在src中，而是一个自定义的属性data-src中
+        img[i].src = img[i].dataset.src;
+      }
+    }
+  }
+
+  function scollImg(fn) {
+    let timer = null;
+    let context = this;
+    return function () {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(context);
+      }, 500)
+    }
+  }
+  window.onload = imgonload;
+  window.onscroll = scollImg(imgonload);
+</script>
