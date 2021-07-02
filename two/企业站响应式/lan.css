@@ -1,0 +1,21 @@
+.scroll-con {
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scroll-con-img {
+    
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s;
+}
+
+.fade {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s;
+}
+.fade:not(.show) {
+    opacity: 1;
+}

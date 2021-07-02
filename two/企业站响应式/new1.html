@@ -1,0 +1,257 @@
+
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous"><!-- 导入bootstrap v5的CSS 文件去除integrity部分 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script><!-- 导入bootstrap v5的js文件集成包去除integrity部分 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+  #header {
+        width: 1200px;
+        height: 100px;
+        background-color: whitegrey;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .logo span {
+        margin-left: 25px;
+    }
+
+    .nav li {
+        display: flex;
+        list-style: none;
+       
+        margin-left: 8px;
+        margin-top: 40px;
+    }
+
+    .nav li a {
+        color: black;
+    }
+
+    .containter {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .list li {
+        border: 1px solid seashell;
+    }
+
+    .list img {
+        width: 400px;
+        height: 400px;
+    }
+
+  .footer{
+  width:1200px;
+  height:350px;
+  background-color: grey;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer  li {
+  display: inline-block;
+  list-style: none;
+  margin-top: 50px;
+  padding-right: 200px;
+  text-align: center;
+  
+</style>
+</head>
+
+<body>
+   <nav class="navbar navbar-default" role="navigation">
+   	<div class="container-fluid"> 
+   	<div class="navbar-header">
+   		<button type="button" class="navbar-toggle" data-toggle="collapse">
+   				data-target="#example-navbar-collapse">
+   			<span class="sr-only">切换导航</span>
+   			<span class="icon-bar"></span>
+   			<span class="icon-bar"></span>
+   			<span class="icon-bar"></span>
+   		</button>
+   		<a class="navbar-brand" href="#"><img src="G.png" style="width: 35px;height:35px;"></a>
+   		<a class="navbar-brand" href="#" style="margin-left: 10px;">XXXholic</a>
+   		
+   	</div>
+   	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+   		<ul class="nav navbar-nav">
+   			<li class="active"><a href="index.html">首页</a></li>
+   			<li><a href="new.html">新闻</a></li>
+			<li><a href="about.html">关于我们</a></li>
+   			
+   			<!-- <li class="dropdown">
+   				<a href="about.html" class="dropdown-toggle" data-toggle="dropdown">
+   					关于我们 <b class="caret"></b>
+   				</a>
+   				<!-- <ul class="dropdown-menu">
+   					<li><a href="#">aaa</a></li>
+   					<li><a href="#">bbb</a></li>
+   					<li><a href="#">ccc</a></li>
+   					<li class="divider"></li>
+   					<li><a href="#">ddd</a></li>
+   					<li class="divider"></li>
+   					<li><a href="#">fff</a></li>
+   				</ul> -->
+   			</li>
+   		</ul>
+   	</div>
+   	</div>
+   </nav>
+<!-- 分页 ==========================================================-->
+
+
+
+
+
+
+<!-- 分页============================================================= -->
+<div class="container">
+<div>
+    <ul class="list">
+
+    </ul>
+</div>
+
+
+
+    <!-- 分页 -->
+    <div style="margin-left: 550px;">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li onclick="pre()" class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li onclick="getUrl(1)" class="page-item"><a class="page-link" href="#">1</a></li>
+            <li onclick="getUrl(2)" class="page-item"><a class="page-link" href="#">2</a></li>
+            <li onclick="getUrl(3)" class="page-item"><a class="page-link" href="#">3</a></li>
+            <li onclick="next()" class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+</div>
+
+<br>
+   <br>
+   <br>  
+
+<div class="row " ">
+  <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img src="ting.png" alt="...">
+      </a>
+      <h4 style="text-align: center;">13110769174</h4>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img src="youjian.png" alt="...">
+      </a>
+      <h4 style="text-align: center;">邮件</h4>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img src="dizhi.png" alt="...">
+      </a>
+      <h4 style="text-align: center;">地址</h4>
+  </div>
+  <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+          <img src="er.jpg" alt="...">
+      </a>
+      <h4 style="text-align: center;">求关注！！！</h4>
+  </div>
+
+  <hr width:400px>
+  <h4 style="text-align: center;">@lyl-gjxm</h4>
+
+
+
+  <script>
+        let current = Number(window.location.href.split("?page=")[1]) || 1;
+        function pre() {
+            if (current > 1) {
+                getUrl(current - 1);
+            }
+        }
+        function next() {
+            if (current < 3) {
+                getUrl(current + 1);
+            }
+        }
+        function getUrl(page) {
+            window.location.href = `?page=${page}`
+        }
+
+        page(current);
+        function page(page) {
+            current = page;
+            $('.list').empty();
+            axios.get(`https://www.fastmock.site/mock/fb935f3f68b85ade01dd9d1c0b35bd65/lyl1129/api?page=${page}`).then(function (res) {
+                console.log(res.data.data, res.data.data.list);
+                for (let i = 0; i < res.data.data.list.length; i++) {
+                    console.log(res.data);
+                    let li = $('<li></li>');
+                    li.append(`<img width='500px' height='300px' src=${res.data.data.list[i].img}>`);
+                    li.append(`<h3 style="text-align:center;">${res.data.data.list[i].title}</h3>`)
+                    li.append(`<span style="margin-left:170px;">${res.data.data.list[i].time}</span>`)
+                    li.attr('id', res.data.data.list[i].id);
+                    $('.list').append(li);
+                }
+                $('.list li').click(function () {
+                    window.location.href = `detail.html?id=${$(this).attr('id')}`
+
+                })
+            })
+        }
+    </script>
+    </script>
+
+</body>
+
+</html>

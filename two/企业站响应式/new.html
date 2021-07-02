@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	
+<!--    <link rel="stylesheet" href="lan.css"> -->
+	
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+	
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	
+	<script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes.js"></script>
+    <style type="text/css">
+        /*  #header{
+            width: 1200px;
+            height: 50px;
+            margin: 0;
+        }
+        #header .a1{
+            margin-top: 10px;
+            float: left;
+            font-size: 15px;
+            color: black;
+        }
+        #header .a2{
+            margin-top: 15px;
+            float: right;
+            text-align: left;
+            font-size: 10px;
+            color: black;
+        }
+        #header li{
+            float: left;
+            margin-left: 15px;
+            list-style: none;
+        } */
+        .a1 h5{margin-left: 20px;}
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        h5{
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+
+        .containter,
+        .containter1 {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+            
+        }
+
+        .list li {
+            border: 1px solid seashell;
+            width: 30%;
+           
+        }
+
+        .list img {
+            width: 300px;
+            height: 300px;
+        }
+        #footer .f1 li{
+          float: left;
+          list-style: none;
+          width: 22%;
+          margin-left: 25px;
+          margin-top: 30px;
+          }
+          
+        #footer .f1 li img{
+          width: 150px;
+          height: 150px;
+          margin-left: 60px;
+          }
+          
+        #footer h3{
+          clear: both;
+          text-align: center;
+          }
+          p{
+             text-align: center;
+           }
+
+
+</style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-default" role="navigation">
+    	<div class="container-fluid"> 
+    	<div class="navbar-header">
+    		<button type="button" class="navbar-toggle" data-toggle="collapse"
+    				data-target="#example-navbar-collapse">
+    			<span class="sr-only">切换导航</span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    		</button>
+    		<a class="navbar-brand" href="#"><img class="lazyload" data-src="G.png" style="width: 35px;height:35px;"></a>
+    		<a class="navbar-brand" href="#" style="margin-left: 10px;">XXXholic</a>
+    		
+    	</div>
+    	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    		<ul class="nav navbar-nav">
+    			<li class="active"><a href="index.html">首页</a></li>
+    			<li><a href="new.html">新闻</a></li>
+    			<li><a href="about.html">关于我们</a></li>
+    			
+    			</li>
+    		</ul>
+    	</div>
+    	
+    </nav>
+
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-body" style="color:black;text-align: center;">
+    不是我慧眼识珠发现了你，是你披荆斩棘向我走来。
+  </div>
+</div>
+
+
+ <!-- 4:3 aspect ratio -->
+ <div class="embed-responsive embed-responsive-4by3">
+   <iframe class="embed-responsive-item" src="回个电话吧.mp4"></iframe>
+ </div>
+ 
+<br>
+<br>
+<br>
+
+
+     <div class="container1" style="margin-right: 100px;margin-left: 50px;">
+        <div>
+            <ul class="list">
+                
+
+            </ul>
+			
+        </div>
+		
+	
+		
+		<div class="panel panel-default">
+		  <!-- Default panel contents -->
+		  <div class="panel-heading">人物介绍</div>
+		  <div class="panel-body">
+		    <p>龚俊（Simon，1992年11月29日-），出生于四川成都，毕业于东华大学，中国内地男演员。  2016年，参演网剧《刀剑缭乱》，正式以演员身份出道。
+		   2018年，在网剧《盛势》首次担任主角而被观众熟知；同年11月，首本图书作品《1129》正式发售。2019年，首次参与动画电影《虫林大作战》的配音，在剧中为阿波罗配音。
+		   2020年，主演的《你好，火焰蓝》因消防员造型引发观众热议。随后主演的《致我们甜甜的小美满》《从结婚开始恋爱》小甜剧，热度稳步上升。
+		   2021年，在《山河令》中饰演温客行而迅速走红；同年5月，参加主题演唱会生来知己《山河令》。</p>
+		  </div>
+		
+		  <!-- Table -->
+		  <table class="table"style="border=3;">
+		    <tr>
+				<th>主要作品</th>
+				<th>扮演角色</th>
+				<th>上映时间</th>
+			</tr>
+			<tr>
+				<td>醉玲珑</td>
+				<td>元澈</td>
+				<td>2017-7-13</td>
+			</tr>
+			<tr>
+				<td>绝世千金</td>
+				<td>钟无寐</td>
+				<td>2019-01-17</td>
+			</tr>
+			<tr>
+				<td>从结婚开始恋爱</td>
+				<td>凌睿</td>
+				<td>2020-10-29</td>
+			</tr>
+			<tr>
+				<td>山河令</td>
+				<td>温客行</td>
+				<td>2021-2-22</td>
+			</tr>
+			
+			
+		  </table>
+		</div>
+		
+		<div style='display: flex;'>
+			<nav aria-label="Page navigation" style='margin:0 auto;'>
+			  <ul class="pagination">
+			    <li onclick="pre()" >
+			      <a href="#" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			      </a>
+			    </li>
+			    <li  onclick="getUrl(1)" ><a href="#">1</a></li>
+				<li  onclick="getUrl(2)" ><a href="#">2</a></li>
+				<li  onclick="getUrl(3)" ><a href="#">3</a></li>
+			   
+			    <li>
+			      <a onclick="next()" href="#" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+		</div>
+
+		
+		
+		
+		
+		
+        <!-- 分页 -->
+		<!-- <div style="display: table;margin: 0 auto;">
+		<nav aria-label="Page navigation">
+		  <ul class="pagination">
+		    <li onclick="pre()" class="page-item" style="display:inline-block;">
+		      <a class="pack-link" href="#" aria-label="Previous" style="display:inline-block;">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li onclick="getUrl(1)" ><a class="page-link" a href="#">1</a></li>
+		    <li onclick="getUrl(1)" class="page-item"><a class="page-link" a href="#">2</a></li>
+		    <li onclick="getUrl(1)" class="page-item"><a class="page-link" a href="#">3</a></li>
+		  
+			
+		    <li onclick="next()" class="page-item">
+		      <a  class="page-link" href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+		</div> -->
+		<!-- </div> -->
+		
+		
+		
+<!--        <div style="display: table;margin: 0 auto;">
+            <nav aria-label="Page navigation example">
+               <ul class="pagination">
+                    <li onclick="pre()" class="page-item" style="display: inline-block;">
+                        <a class="page-link" href="#" aria-label="Previous" style="display: inline-block;">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li onclick="getUrl(1)" class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li onclick="getUrl(2)" class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li onclick="getUrl(3)" class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li onclick="next()" class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+ 
+ -->
+ 
+ 
+ 
+ <br>
+ <br>
+ <br>  
+
+<div class="row  ">
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img class="lazyload" data-src="ting.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">13110769174</h4>
+   </div>
+ 
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img class="lazyload" data-src="youjian.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">邮件</h4>
+   </div>
+ 
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img class="lazyload" data-src="dizhi.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">地址</h4>
+   </div>
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img class="lazyload" data-src="er.jpg" alt="...">
+       </a>
+       <h4 style="text-align: center;">求关注！！！</h4>
+   </div>
+ 
+   <hr width:400px>
+   <h4 style="text-align: center;">@lyl-gjxm</h4> 
+   
+   
+   
+      <script>
+        let current = Number(window.location.href.split("?page=")[1]) || 1;
+        function pre() {
+            if (current > 1) {
+                getUrl(current - 1);
+            }
+        }
+        function next() {
+            if (current < 3) {
+                getUrl(current + 1);
+            }
+        }
+        function getUrl(page) {
+            window.location.href = `?page=${page}`
+        }
+
+        page(current);
+		console.log("sss")
+				function page(page) {
+            current = page;
+            $('.list').empty();
+            axios.get(`https://www.fastmock.site/mock/fb935f3f68b85ade01dd9d1c0b35bd65/lyl1129/api?page=${page}`).then(function (res) {
+                for (let i = 0; i < res.data.data.list.length; i++) {
+                    console.log(res.data); 
+                    let li = $('<li></li>');
+                    li.append(`<img width='500px' height='300px' class='lazyload' data-src=${res.data.data.list[i].img}>`);
+                    li.append(`<h3 style="text-align:center;">${res.data.data.list[i].title}</h3>`)
+                    li.append(`<span style="margin-left:170px;">${res.data.data.list[i].time}</span>`)
+                    li.attr('id', res.data.data.list[i].id);
+                    $('.list').append(li);
+                }
+                $('.list li').click(function () {
+                    window.location.href = `newdetail.html?id=${$(this).attr('id')}`
+
+                })
+            })
+        }
+    </script>
+    </script>
+
+
+
+
+
+</body>
+</html>
+
+
+<!-- <script>
+    const con = document.querySelector('.scroll-con')
+    const imgs = document.querySelectorAll('.scroll-con-img')
+    function lazyLoad(target) {
+        const io = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target
+                    const src = img.getAttribute('data-src')
+                    img.setAttribute('src', src)
+                    img.classList.add('fade')
+                    observer.disconnect()
+                }
+            })
+        }, {
+            root: con,
+            threshold: 1,
+            rootMargin: '0px'
+        })
+        io.observe(target)
+    }
+    imgs.forEach(lazyLoad)
+  </script>
+  -->
+  
+  <script>
+    function imgonload() {
+      let img = document.querySelectorAll("img");
+      /*console.log(img);*/
+      for(let i=0; i<img.length; i++) {
+        if(img[i].getBoundingClientRect().top < window.innerHeight) {
+          //图片一旦有src就会加载出来，所以图片的路径不会放在src中，而是一个自定义的属性data-src中
+          img[i].src = img[i].dataset.src;
+        }
+      }
+    }
+  
+    function scollImg(fn) {
+      let timer = null;
+      let context = this;
+      return function () {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          fn.apply(context);
+        }, 500)
+      }
+    }
+		/* window.onload = imgonload; */
+	/* window.onscroll = scollImg(imgonload); */
+  </script>
