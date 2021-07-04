@@ -93,10 +93,10 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active">
            <img class="scroll-con-img" data-src="10.jpg" data-srcset="
-                          10（540）.jpg 540w,
-                          10（700）.jpg 720w,
-                          10（900）.jpg 900w,
-                         10（1080）.jpg 1080w,
+                          10(540).jpg 540w,
+                          10(720).jpg 720w,
+                          10(900).jpg 900w,
+                         10(1080).jpg 1080w,
                           10.jpg
                           " data-sizes="auto">
           <div class="carousel-caption">
@@ -105,10 +105,10 @@
         </div>
         <div class="item">
           <img class="scroll-con-img" data-src="9.jpg" data-srcset="
-                       9（540）.jpg 540w,
-                        9（700）.jpg 720w,
-                        9（900）.jpg 900w,
-                       9（1080）.jpg 1080w,
+                       9(540).jpg 540w,
+                        9(720).jpg 720w,
+                        9(900).jpg 900w,
+                       9(1080).jpg 1080w,
                         9.jpg
                          " data-sizes="auto">
           <div class="carousel-caption">
@@ -119,10 +119,10 @@
         <!-- ======================================== -->
         <div class="item">
           <img class="scroll-con-img" data-src="8.jpg" data-srcset="
-                         8（540）.jpg 540w,
-                         8（700）.jpg 720w,
-                         8（900）.jpg 900w,
-                        8（1080）.jpg 1080w,
+                         78(540).jpg 540w,
+                         8(720).jpg 720w,
+                         8(900).jpg 900w,
+                        8(1080).jpg 1080w,
                          8.jpg
                          " data-sizes="auto">
           <div class="carousel-caption">
@@ -133,10 +133,10 @@
 
           <div class="item">
               <img class="scroll-con-img" data-src="7.jpg" data-srcset="
-                             7（540）.jpg 540w,
-                             7（720）.jpg 720w,
-                             7（900）.jpg 900w,
-                            7（1080）.jpg 1080w,
+                             7(540).jpg 540w,
+                             7(720).jpg 720w,
+                             7(900).jpg 900w,
+                            7(1080).jpg 1080w,
                              7.jpg
                              " data-sizes="auto">
               <div class="carousel-caption">
@@ -145,11 +145,11 @@
             </div>
 
             <div class="item">
-              <img class="scroll-con-img" data-src="6.jpg" data-srcset="                                 
-                             6（540）.jpg 540w,                      
-                             6（720）.jpg 720w,
-                             6（900）.jpg 900w,
-                             6（1080）.jpg 1080w,
+              <img class="scroll-con-img" data-src="6.jpg" data-srcset="
+                             6(540).jpg 540w,
+                             6(720).jpg 720w,
+                             6(900).jpg 900w,
+                            6(1080).jpg 1080w,
                              6.jpg
                              " data-sizes="auto">
               <div class="carousel-caption">

@@ -23,24 +23,28 @@
   window.onload = imgonload;
   window.onscroll = scollImg(imgonload); */
 
-  const con = document.querySelector('.scroll-con')
-            const imgs = document.querySelectorAll('.scroll-con-img')
-            function lazyLoad(target) {
-                const io = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target
-                            const src = img.getAttribute('data-src')
-                            img.setAttribute('src', src)
-                            img.classList.add('fade')
-                            observer.disconnect()
-                        }
-                    })
-                }, {
-                    root: con,
-                    threshold: 1,
-                    rootMargin: '0px'
-                })
-                io.observe(target)
-            }
-            imgs.forEach(lazyLoad)
+  
+          const con = document.querySelector('.scroll-con')
+          const imgs = document.querySelectorAll('.scroll-con-img')
+          function lazyLoad(target) {
+              const io = new IntersectionObserver((entries, observer) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          const img = entry.target
+                          const src = img.getAttribute('data-src')
+                          const srcset = img.getAttribute('data-srcset')
+                          if (src != null) { img.setAttribute('src', src) }
+                          if (srcset != null) { img.setAttribute('srcset', srcset) }
+                          img.classList.add('fade')
+                          observer.disconnect()
+                      }
+                  })
+              }, {
+                  root: con,
+                  threshold: 1,
+                  rootMargin: '0px'
+              })
+              io.observe(target)
+          }
+          imgs.forEach(lazyLoad)
+   
