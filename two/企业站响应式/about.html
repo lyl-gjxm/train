@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=In2GUxBnPRvAKqlYZDG0HwO7DY7y0IU7"></script>  
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script><!--调用jQuery-->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=In2GUxBnPRvAKqlYZDG0HwO7DY7y0IU7"></script>  
+    <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script><!--调用jQuery-->
 
 
      <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
@@ -187,11 +187,16 @@
                   let email = $('#exampleInputEmail1').val()
                   let message = $('#exampleInputPassword1').val()              
               axios({
-                  url:'https://oltijszl.lc-cn-n1-shared.com/1.1/classes/data',
+                  /* url:'https://oltijszl.lc-cn-n1-shared.com/1.1/classes/data',
                   method:'post',
                   headers:{
                     'X-LC-Id':'OLtijszl5VM3cqWSQA9vYrN7-gzGzoHsz',
-                    'X-LC-Key':'ew4uPvRB7ez4PY1geeA9X44j'
+                    'X-LC-Key':'ew4uPvRB7ez4PY1geeA9X44j' */
+					 url: 'https://iutfexqq.lc-cn-n1-shared.com/1.1/classes/email',
+					                    method: 'post',
+					                    headers: {
+					                        'X-LC-Id': 'PNqOuC8eAdiz5w1phCGHgn3e-gzGzoHsz',
+					                        'X-LC-Key': "A9iOTDYUUW3ij4eY5qdRQVWN"
                   },
                   data:{
                     email:email,
