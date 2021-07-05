@@ -1,19 +1,29 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>详情页</title>
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- ======================== -->
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    crossorigin="anonymous"><!-- 导入bootstrap v5的CSS 文件去除integrity部分 -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script><!-- 导入bootstrap v5的js文件集成包去除integrity部分 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="lan.css">
+	
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
+<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script><!--调用jQuery-->
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
 
 <style>
     * {
@@ -91,19 +101,95 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
 </head>
 
 <body>
-<div id="list"></div>
-<script>
-
-    var i = window.location.search.split('=')[1]  /* https://lingqule.papamk.com/wp-json/w2w/v1/products/${id} */
-	console.log(i);
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid"> 
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#example-navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img  src="G.png" style="width: 35px;height:35px;"></a>
+			<a class="navbar-brand" href="#" style="margin-left: 10px;">XXXholic</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="index.html">首页</a></li>
+				<li><a href="new.html">新闻</a></li>
+				<li><a href="about.html">关于我们</a></li>
+				
+				<!-- <li class="dropdown">
+					<a href="about.html" class="dropdown-toggle" data-toggle="dropdown">
+						关于我们 <b class="caret"></b>
+					</a> -->
+					<!-- <ul class="dropdown-menu">
+						<li><a href="#">aaa</a></li>
+						<li><a href="#">bbb</a></li>
+						<li><a href="#">ccc</a></li>
+						<li class="divider"></li>
+						<li><a href="#">ddd</a></li>
+						<li class="divider"></li>
+						<li><a href="#">fff</a></li>
+					</ul> -->
+				</li>
+			</ul>
+		</div>
+		</div>
+	</nav>
 	
+	
+	
+   <div id="list" style="text-align: center;"></div>
+
+ <div class="row" style="margin: 0;padding: 0">
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img src="ting.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">13110769174</h4>
+   </div>
+ 
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img  src="youjian.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">邮件</h4>
+   </div>
+ 
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img src="dizhi.png" alt="...">
+       </a>
+       <h4 style="text-align: center;">地址</h4>
+   </div>
+   <div class="col-xs-6 col-md-3">
+       <a href="#" class="thumbnail">
+           <img  src="er.jpg" alt="...">
+       </a>
+       <h4 style="text-align: center;">求关注！！！</h4>
+       <hr width:400px>
+       <h4 style="text-align: center;">@lyl-gjxm</h4>
+   </div>
+ 
+
+<script>
+    var i = window.location.search.split('=')[1]  /* https://lingqule.papamk.com/wp-json/w2w/v1/products/${id} */
+	console.log(i);	
     axios.get(` https://www.fastmock.site/mock/fb935f3f68b85ade01dd9d1c0b35bd65/lyl1129/1?id=${i}`).then(res => {
         console.log(res);
-		var list = $(`#list`);
-		list.append(`<img src=${res.data.data.list[0].imgUrl}>`)
-		list.append(`<span>${res.data.data.list[0].title}</span> `)
-		list.append(`<span>${res.data.data.list[0].time}</span> `) 
-	list.append(`<span>${res.data.data.list[0].content}</span> `) 
+		// var list = $(`#list`);
+        var row = $(`#list`);
+		// list.append(`<img src=${res.data.data.list[0].imgUrl}>`)
+		// list.append(`<span>${res.data.data.list[0].title}</span> `)
+		// list.append(`<span>${res.data.data.list[0].date}</span> `) 
+	    // list.append(`<span>${res.data.data.list[0].content}</span> `) 
+        row.append(`<h3 >${res.data.data.list[0].title}</h3>`);
+        row.append(`<p  style="color:darkgrey; font-size: 15px; margin: auto;">${res.data.data.list[0].date}</p>`);
+        row.append(`<img style="height:400px;width:500px;margin:auto" class="img-responsive center-block"  src="${res.data.data.list[0].imgUrl}" alt="">`);
+        row.append(`<div><p style="font-size: 13px;margin-top:15px">${res.data.data.list[0].content}</p></div>`);
         
     })	
 </script>
